@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+*.egg
+build
+htmlcov
+__pycache__
+input_files
+input.flac
