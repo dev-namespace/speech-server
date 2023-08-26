@@ -9,3 +9,7 @@ htmlcov
 __pycache__
 input_files
 input.flac
+
+notes.org
+bark_out.wav
+output.wav

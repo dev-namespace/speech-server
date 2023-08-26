@@ -12,9 +12,9 @@ COPY ./ /voice-server
 WORKDIR /voice-server
 
 # Preload AI models
-#RUN python -c "from faster_whisper import WhisperModel; model = WhisperModel('large-v2', device='cuda', compute_type='float16')"
-#RUN python -c "from transformers import AutoProcessor, AutoModel; model = AutoModel.from_pretrained('suno/bark-small')"
+RUN python -c "from faster_whisper import WhisperModel; model = WhisperModel('large-v2', device='cuda', compute_type='float16')"
+RUN python -c "from transformers import AutoProcessor, AutoModel; model = AutoModel.from_pretrained('suno/bark-small')"
 
-# CMD ["python", "main.py"]
+CMD ["python", "main.py"]
 
 EXPOSE 5000

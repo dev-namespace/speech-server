@@ -25,7 +25,12 @@ docker run --gpus all -it -p 5000:5000 voice-server
 Test it:
 ``` sh
 curl -X POST -F "file=@/path/input.wav" http://localhost:5000/transcribe
-curl -X POST -H "Content-Type: application/json" -d '{"text":"test"}' http://localhost:5000/generate_speech
+curl -X POST -H "Content-Type: application/json" -d '{"text":"Hello, my name is Suno"}' http://localhost:5000/generate_speech --output output.wav
+```
+
+Run it for development:
+``` sh
+docker run --gpus all -it -p 5000:5000 -v .:/voice-server voice-server /bin/bash
 ```
 
 

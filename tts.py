@@ -11,7 +11,6 @@ def start_tts(model_name="suno/bark-small"):
     model = AutoModel.from_pretrained(model_name).to("cuda")
 
 def generate_voice(text, preset = "v2/en_speaker_6"):
-    text = "The term 'registry systems and tools' in a job description can refer to a range of different technologies, depending on the specifics of the organization and role."
     inputs = processor(
         text=[text],
         voice_preset=preset
